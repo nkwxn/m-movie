@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CA5248806C1DA167B75C92A /* Pods_Mandiri_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB8B3DD44AA397915401652 /* Pods_Mandiri_Movie.framework */; };
+		D51ECB8C28055A6D005140EA /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECB8B28055A6D005140EA /* NetworkingHelper.swift */; };
+		D51ECB9228055D7D005140EA /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECB9128055D7D005140EA /* URLConstants.swift */; };
+		D51ECB94280560F4005140EA /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECB93280560F4005140EA /* Genre.swift */; };
+		D51ECB962805713E005140EA /* VIPERContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECB952805713E005140EA /* VIPERContract.swift */; };
 		D555539D2805465300CF6D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555539C2805465300CF6D8F /* AppDelegate.swift */; };
 		D555539F2805465300CF6D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555539E2805465300CF6D8F /* SceneDelegate.swift */; };
-		D55553A12805465300CF6D8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553A02805465300CF6D8F /* ViewController.swift */; };
-		D55553A42805465300CF6D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553A22805465300CF6D8F /* Main.storyboard */; };
 		D55553A62805465500CF6D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55553A52805465500CF6D8F /* Assets.xcassets */; };
 		D55553A92805465500CF6D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553A72805465500CF6D8F /* LaunchScreen.storyboard */; };
+		D55553BB28054A2D00CF6D8F /* GenreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553B928054A2D00CF6D8F /* GenreListViewController.swift */; };
+		D55553BC28054A2D00CF6D8F /* GenreListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55553BA28054A2D00CF6D8F /* GenreListViewController.xib */; };
+		D55553BF28054A6800CF6D8F /* GenreListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553BE28054A6800CF6D8F /* GenreListInteractor.swift */; };
+		D55553C128054A7300CF6D8F /* GenreListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553C028054A7300CF6D8F /* GenreListPresenter.swift */; };
+		D55553C328054A9200CF6D8F /* GenreListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553C228054A9200CF6D8F /* GenreListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB8B3DD44AA397915401652 /* Pods_Mandiri_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mandiri_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6946B97B246346C6E92885 /* Pods-Mandiri Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mandiri Movie.release.xcconfig"; path = "Target Support Files/Pods-Mandiri Movie/Pods-Mandiri Movie.release.xcconfig"; sourceTree = "<group>"; };
+		B12C54BA000C4C24BEB55EB6 /* Pods-Mandiri Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mandiri Movie.debug.xcconfig"; path = "Target Support Files/Pods-Mandiri Movie/Pods-Mandiri Movie.debug.xcconfig"; sourceTree = "<group>"; };
+		D51ECB8B28055A6D005140EA /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		D51ECB9128055D7D005140EA /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		D51ECB93280560F4005140EA /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		D51ECB952805713E005140EA /* VIPERContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERContract.swift; sourceTree = "<group>"; };
 		D55553992805465300CF6D8F /* Mandiri Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mandiri Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D555539C2805465300CF6D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D555539E2805465300CF6D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D55553A02805465300CF6D8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D55553A32805465300CF6D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D55553A52805465500CF6D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55553A82805465500CF6D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55553AA2805465500CF6D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55553B928054A2D00CF6D8F /* GenreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListViewController.swift; sourceTree = "<group>"; };
+		D55553BA28054A2D00CF6D8F /* GenreListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreListViewController.xib; sourceTree = "<group>"; };
+		D55553BE28054A6800CF6D8F /* GenreListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListInteractor.swift; sourceTree = "<group>"; };
+		D55553C028054A7300CF6D8F /* GenreListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListPresenter.swift; sourceTree = "<group>"; };
+		D55553C228054A9200CF6D8F /* GenreListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA5248806C1DA167B75C92A /* Pods_Mandiri_Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B86E83BBF3F0F983E1DE32BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B12C54BA000C4C24BEB55EB6 /* Pods-Mandiri Movie.debug.xcconfig */,
+				8C6946B97B246346C6E92885 /* Pods-Mandiri Movie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D51ECB8A28055A5E005140EA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB8B28055A6D005140EA /* NetworkingHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D51ECB8F28055D6C005140EA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB9128055D7D005140EA /* URLConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D51ECB97280571B6005140EA /* DiscoverMovie */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB98280571BF005140EA /* View */,
+				D51ECB99280571C4005140EA /* Interactor */,
+				D51ECB9A280571CB005140EA /* Presenter */,
+				D51ECB9B280571D7005140EA /* Router */,
+			);
+			path = DiscoverMovie;
+			sourceTree = "<group>";
+		};
+		D51ECB98280571BF005140EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D51ECB99280571C4005140EA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D51ECB9A280571CB005140EA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D51ECB9B280571D7005140EA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		D55553902805465300CF6D8F = {
 			isa = PBXGroup;
 			children = (
 				D555539B2805465300CF6D8F /* Mandiri Movie */,
 				D555539A2805465300CF6D8F /* Products */,
+				B86E83BBF3F0F983E1DE32BA /* Pods */,
+				F1063B212A3915354A312132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +141,103 @@
 		D555539B2805465300CF6D8F /* Mandiri Movie */ = {
 			isa = PBXGroup;
 			children = (
-				D555539C2805465300CF6D8F /* AppDelegate.swift */,
-				D555539E2805465300CF6D8F /* SceneDelegate.swift */,
-				D55553A02805465300CF6D8F /* ViewController.swift */,
-				D55553A22805465300CF6D8F /* Main.storyboard */,
+				D55553B02805465E00CF6D8F /* Vendor */,
+				D55553B12805466300CF6D8F /* Module */,
 				D55553A52805465500CF6D8F /* Assets.xcassets */,
 				D55553A72805465500CF6D8F /* LaunchScreen.storyboard */,
 				D55553AA2805465500CF6D8F /* Info.plist */,
 			);
 			path = "Mandiri Movie";
+			sourceTree = "<group>";
+		};
+		D55553B02805465E00CF6D8F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB8F28055D6C005140EA /* Constants */,
+				D51ECB8A28055A5E005140EA /* Helper */,
+				D55553BD28054A4B00CF6D8F /* EntitiesModels */,
+				D55553B3280546A600CF6D8F /* Base */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D55553B12805466300CF6D8F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB97280571B6005140EA /* DiscoverMovie */,
+				D55553B22805467700CF6D8F /* GenreList */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D55553B22805467700CF6D8F /* GenreList */ = {
+			isa = PBXGroup;
+			children = (
+				D55553B4280546B500CF6D8F /* View */,
+				D55553B72805473400CF6D8F /* Interactor */,
+				D55553B82805473B00CF6D8F /* Presenter */,
+				D55553B62805473000CF6D8F /* Router */,
+			);
+			path = GenreList;
+			sourceTree = "<group>";
+		};
+		D55553B3280546A600CF6D8F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D555539C2805465300CF6D8F /* AppDelegate.swift */,
+				D555539E2805465300CF6D8F /* SceneDelegate.swift */,
+				D51ECB952805713E005140EA /* VIPERContract.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D55553B4280546B500CF6D8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D55553B928054A2D00CF6D8F /* GenreListViewController.swift */,
+				D55553BA28054A2D00CF6D8F /* GenreListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D55553B62805473000CF6D8F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D55553C228054A9200CF6D8F /* GenreListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D55553B72805473400CF6D8F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D55553BE28054A6800CF6D8F /* GenreListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D55553B82805473B00CF6D8F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D55553C028054A7300CF6D8F /* GenreListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D55553BD28054A4B00CF6D8F /* EntitiesModels */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECB93280560F4005140EA /* Genre.swift */,
+			);
+			path = EntitiesModels;
+			sourceTree = "<group>";
+		};
+		F1063B212A3915354A312132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CB8B3DD44AA397915401652 /* Pods_Mandiri_Movie.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D55553AD2805465500CF6D8F /* Build configuration list for PBXNativeTarget "Mandiri Movie" */;
 			buildPhases = (
+				5A0AF0F50282F55BFE0CF96B /* [CP] Check Pods Manifest.lock */,
 				D55553952805465300CF6D8F /* Sources */,
 				D55553962805465300CF6D8F /* Frameworks */,
 				D55553972805465300CF6D8F /* Resources */,
+				DC1BE21DC03AA5467901F928 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +302,75 @@
 			files = (
 				D55553A92805465500CF6D8F /* LaunchScreen.storyboard in Resources */,
 				D55553A62805465500CF6D8F /* Assets.xcassets in Resources */,
-				D55553A42805465300CF6D8F /* Main.storyboard in Resources */,
+				D55553BC28054A2D00CF6D8F /* GenreListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A0AF0F50282F55BFE0CF96B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mandiri Movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1BE21DC03AA5467901F928 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mandiri Movie/Pods-Mandiri Movie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mandiri Movie/Pods-Mandiri Movie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mandiri Movie/Pods-Mandiri Movie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D55553952805465300CF6D8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D55553A12805465300CF6D8F /* ViewController.swift in Sources */,
+				D51ECB94280560F4005140EA /* Genre.swift in Sources */,
+				D55553C128054A7300CF6D8F /* GenreListPresenter.swift in Sources */,
+				D55553BF28054A6800CF6D8F /* GenreListInteractor.swift in Sources */,
 				D555539D2805465300CF6D8F /* AppDelegate.swift in Sources */,
 				D555539F2805465300CF6D8F /* SceneDelegate.swift in Sources */,
+				D51ECB8C28055A6D005140EA /* NetworkingHelper.swift in Sources */,
+				D51ECB9228055D7D005140EA /* URLConstants.swift in Sources */,
+				D55553C328054A9200CF6D8F /* GenreListRouter.swift in Sources */,
+				D51ECB962805713E005140EA /* VIPERContract.swift in Sources */,
+				D55553BB28054A2D00CF6D8F /* GenreListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D55553A22805465300CF6D8F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D55553A32805465300CF6D8F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D55553A72805465500CF6D8F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +498,7 @@
 		};
 		D55553AE2805465500CF6D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12C54BA000C4C24BEB55EB6 /* Pods-Mandiri Movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +509,6 @@
 				INFOPLIST_FILE = "Mandiri Movie/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +526,7 @@
 		};
 		D55553AF2805465500CF6D8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6946B97B246346C6E92885 /* Pods-Mandiri Movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +537,6 @@
 				INFOPLIST_FILE = "Mandiri Movie/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
