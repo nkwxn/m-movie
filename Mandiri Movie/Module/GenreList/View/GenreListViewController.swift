@@ -34,7 +34,6 @@ class GenreListViewController: UIViewController, GenreViewContract {
     }
     
     func update(with genres: [Genre]) {
-        print(genres)
         DispatchQueue.main.async {
             self.genres = genres
             self.genreTableView.reloadData()
@@ -74,5 +73,11 @@ extension GenreListViewController: UITableViewDataSource, UITableViewDelegate {
         config.text = genres[indexPath.row].name
         cell.contentConfiguration = config
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let discoverRouter = DiscoverMovieRouter.start(with: genres[indexPath.row])
+        let vc = discoverRouter.entry!
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

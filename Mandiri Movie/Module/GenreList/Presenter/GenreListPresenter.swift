@@ -24,7 +24,6 @@ class GenreListPresenter: GenrePresenterContract {
     var interactor: AnyInteractor? {
         didSet {
             if let interactor = interactor as? GenreInteractorContract {
-                print("Should get genres")
                 interactor.getGenres()
             }
         }

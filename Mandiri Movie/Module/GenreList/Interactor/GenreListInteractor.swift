@@ -16,7 +16,6 @@ class GenreListInteractor: GenreInteractorContract {
     var presenter: AnyPresenter?
     
     func getGenres() {
-        print("Start fetching data")
         AF.request(URLConstants.getGenres, method: .get).response { [weak self] response in
             guard let presenter = self?.presenter as? GenrePresenterContract else {
                 return
@@ -24,9 +23,9 @@ class GenreListInteractor: GenreInteractorContract {
             if let data = response.data {
                 do {
                     let response = try JSONDecoder().decode(BaseGenres.self, from: data)
-                    print("Response success: \(response.genres)")
                     presenter.interactorDidFetchGenres(with: .success(response.genres))
                 } catch {
+                    fatalError(error.localizedDescription)
                 }
             } else if let error = response.error {
                 presenter.interactorDidFetchGenres(with: .failure(error))
