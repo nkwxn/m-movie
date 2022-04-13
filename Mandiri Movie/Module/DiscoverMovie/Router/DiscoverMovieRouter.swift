@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol DiscoverMovieRouterContract: AnyRouter {
     static func start(with genre: Genre?) -> AnyRouter
@@ -21,6 +22,7 @@ class DiscoverMovieRouter: DiscoverMovieRouterContract {
         var interactor: AnyInteractor = DiscoverMovieInteractor()
         
         view.presenter = presenter
+        (view as! UIViewController).title = "No genre!"
         
         interactor.presenter = presenter
         
@@ -45,10 +47,11 @@ class DiscoverMovieRouter: DiscoverMovieRouterContract {
         
         // Assign VIP
         var view: AnyView = DiscoverMovieViewController()
-        var presenter: AnyPresenter = DiscoverMoviePresenter(genre?.id)
+        var presenter: AnyPresenter = DiscoverMoviePresenter(genre)
         var interactor: AnyInteractor = DiscoverMovieInteractor()
         
         view.presenter = presenter
+        (view as! UIViewController).title = genre?.name
         
         interactor.presenter = presenter
         

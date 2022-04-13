@@ -19,6 +19,12 @@
 		D51ECBA7280575EF005140EA /* DiscoverMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECBA6280575EF005140EA /* DiscoverMovieRouter.swift */; };
 		D51ECBAB280594F2005140EA /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51ECBA9280594F2005140EA /* MovieCollectionViewCell.swift */; };
 		D51ECBAC280594F2005140EA /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51ECBAA280594F2005140EA /* MovieCollectionViewCell.xib */; };
+		D522A0BB28067998001B1930 /* PrimaryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522A0B928067998001B1930 /* PrimaryInfoViewController.swift */; };
+		D522A0BC28067998001B1930 /* PrimaryInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D522A0BA28067998001B1930 /* PrimaryInfoViewController.xib */; };
+		D522A0BE280679A3001B1930 /* PrimaryInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522A0BD280679A3001B1930 /* PrimaryInfoInteractor.swift */; };
+		D522A0C0280679B0001B1930 /* PrimaryInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522A0BF280679B0001B1930 /* PrimaryInfoPresenter.swift */; };
+		D522A0C3280679C5001B1930 /* PrimaryInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522A0C2280679C5001B1930 /* PrimaryInfoRouter.swift */; };
+		D522A0C6280684F7001B1930 /* UDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522A0C5280684F7001B1930 /* UDHelper.swift */; };
 		D555539D2805465300CF6D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555539C2805465300CF6D8F /* AppDelegate.swift */; };
 		D555539F2805465300CF6D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555539E2805465300CF6D8F /* SceneDelegate.swift */; };
 		D55553A62805465500CF6D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55553A52805465500CF6D8F /* Assets.xcassets */; };
@@ -45,6 +51,12 @@
 		D51ECBA6280575EF005140EA /* DiscoverMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMovieRouter.swift; sourceTree = "<group>"; };
 		D51ECBA9280594F2005140EA /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		D51ECBAA280594F2005140EA /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		D522A0B928067998001B1930 /* PrimaryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoViewController.swift; sourceTree = "<group>"; };
+		D522A0BA28067998001B1930 /* PrimaryInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrimaryInfoViewController.xib; sourceTree = "<group>"; };
+		D522A0BD280679A3001B1930 /* PrimaryInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoInteractor.swift; sourceTree = "<group>"; };
+		D522A0BF280679B0001B1930 /* PrimaryInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoPresenter.swift; sourceTree = "<group>"; };
+		D522A0C2280679C5001B1930 /* PrimaryInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoRouter.swift; sourceTree = "<group>"; };
+		D522A0C5280684F7001B1930 /* UDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDHelper.swift; sourceTree = "<group>"; };
 		D55553992805465300CF6D8F /* Mandiri Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mandiri Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D555539C2805465300CF6D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D555539E2805465300CF6D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +153,58 @@
 			path = "CollectionView Cell";
 			sourceTree = "<group>";
 		};
+		D522A0B42806785D001B1930 /* MoviePrimaryInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0B52806786A001B1930 /* View */,
+				D522A0B628067871001B1930 /* Interactor */,
+				D522A0B7280678CF001B1930 /* Presenter */,
+				D522A0B8280678D5001B1930 /* Router */,
+			);
+			path = MoviePrimaryInfo;
+			sourceTree = "<group>";
+		};
+		D522A0B52806786A001B1930 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0B928067998001B1930 /* PrimaryInfoViewController.swift */,
+				D522A0BA28067998001B1930 /* PrimaryInfoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D522A0B628067871001B1930 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0BD280679A3001B1930 /* PrimaryInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D522A0B7280678CF001B1930 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0BF280679B0001B1930 /* PrimaryInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D522A0B8280678D5001B1930 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0C2280679C5001B1930 /* PrimaryInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D522A0C4280684E7001B1930 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D522A0C5280684F7001B1930 /* UDHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		D55553902805465300CF6D8F = {
 			isa = PBXGroup;
 			children = (
@@ -174,8 +238,9 @@
 		D55553B02805465E00CF6D8F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				D522A0C4280684E7001B1930 /* Helper */,
 				D51ECB8F28055D6C005140EA /* Constants */,
-				D55553BD28054A4B00CF6D8F /* EntitiesModels */,
+				D55553BD28054A4B00CF6D8F /* Entities */,
 				D55553B3280546A600CF6D8F /* Base */,
 			);
 			path = Vendor;
@@ -184,6 +249,7 @@
 		D55553B12805466300CF6D8F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D522A0B42806785D001B1930 /* MoviePrimaryInfo */,
 				D51ECB97280571B6005140EA /* DiscoverMovie */,
 				D55553B22805467700CF6D8F /* GenreList */,
 			);
@@ -244,13 +310,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		D55553BD28054A4B00CF6D8F /* EntitiesModels */ = {
+		D55553BD28054A4B00CF6D8F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				D51ECB93280560F4005140EA /* Genre.swift */,
 				D51ECBA028057448005140EA /* Movie.swift */,
 			);
-			path = EntitiesModels;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		F1063B212A3915354A312132 /* Frameworks */ = {
@@ -324,6 +390,7 @@
 				D51ECBAC280594F2005140EA /* MovieCollectionViewCell.xib in Resources */,
 				D55553A92805465500CF6D8F /* LaunchScreen.storyboard in Resources */,
 				D55553A62805465500CF6D8F /* Assets.xcassets in Resources */,
+				D522A0BC28067998001B1930 /* PrimaryInfoViewController.xib in Resources */,
 				D51ECB9F2805740D005140EA /* DiscoverMovieViewController.xib in Resources */,
 				D55553BC28054A2D00CF6D8F /* GenreListViewController.xib in Resources */,
 			);
@@ -379,18 +446,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51ECB94280560F4005140EA /* Genre.swift in Sources */,
+				D522A0BE280679A3001B1930 /* PrimaryInfoInteractor.swift in Sources */,
 				D55553C128054A7300CF6D8F /* GenreListPresenter.swift in Sources */,
 				D51ECBA7280575EF005140EA /* DiscoverMovieRouter.swift in Sources */,
 				D55553BF28054A6800CF6D8F /* GenreListInteractor.swift in Sources */,
 				D555539D2805465300CF6D8F /* AppDelegate.swift in Sources */,
+				D522A0C6280684F7001B1930 /* UDHelper.swift in Sources */,
 				D51ECB9E2805740D005140EA /* DiscoverMovieViewController.swift in Sources */,
 				D555539F2805465300CF6D8F /* SceneDelegate.swift in Sources */,
 				D51ECBA5280575E2005140EA /* DiscoverMoviePresenter.swift in Sources */,
 				D51ECB9228055D7D005140EA /* URLConstants.swift in Sources */,
+				D522A0BB28067998001B1930 /* PrimaryInfoViewController.swift in Sources */,
 				D55553C328054A9200CF6D8F /* GenreListRouter.swift in Sources */,
 				D51ECB962805713E005140EA /* VIPERContract.swift in Sources */,
+				D522A0C0280679B0001B1930 /* PrimaryInfoPresenter.swift in Sources */,
 				D51ECBA128057448005140EA /* Movie.swift in Sources */,
 				D51ECBAB280594F2005140EA /* MovieCollectionViewCell.swift in Sources */,
+				D522A0C3280679C5001B1930 /* PrimaryInfoRouter.swift in Sources */,
 				D51ECBA3280575CE005140EA /* DiscoverMovieInteractor.swift in Sources */,
 				D55553BB28054A2D00CF6D8F /* GenreListViewController.swift in Sources */,
 			);

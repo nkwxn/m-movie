@@ -17,14 +17,17 @@ struct BaseMovies: Codable {
 struct Movie: Codable {
     let id: Int
     let adult: Bool
+    let backdrop_path: String
+    let original_language: String
     let original_title: String
     let title: String
     let overview: String
-    let backdrop_path: String
+    let popularity: Double
     let poster_path: String
     private let release_date: String
+    let video: Bool
     let vote_average: Double
-    let popularity: Double
+    let vote_count: Int
     
     func getReleaseDate() -> Date {
         let df = DateFormatter()

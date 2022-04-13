@@ -14,9 +14,10 @@ protocol DiscoverMovieInteractorContract: AnyInteractor {
 
 class DiscoverMovieInteractor: DiscoverMovieInteractorContract {
     var presenter: AnyPresenter?
+    var pageLimit: Int = 0
     
     func getMovieDiscovery(with genreId: Int?, on page: Int? = nil) {
-        AF.request(URLConstants.getDiscoverMovies(by: genreId), method: .get).response { [weak self] response in
+        AF.request(URLConstants.getDiscoverMovies(by: genreId, on: page), method: .get).response { [weak self] response in
             guard let presenter = self?.presenter as? DiscoverMoviePresenterContract else {
                 return
             }
@@ -24,6 +25,7 @@ class DiscoverMovieInteractor: DiscoverMovieInteractorContract {
             if let data = response.data {
                 do {
                     let resp = try JSONDecoder().decode(BaseMovies.self, from: data)
+                    self?.pageLimit = resp.total_pages
                     presenter.interactorDidFetchMovies(with: .success(resp.results))
                 } catch {
                     presenter.interactorDidFetchMovies(with: .failure(error))

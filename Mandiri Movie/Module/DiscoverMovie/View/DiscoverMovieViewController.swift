@@ -10,6 +10,7 @@ import UIKit
 protocol DiscoverMovieViewContract: AnyView {
     func update(with movies: [Movie])
     func update(with error: String)
+    func getMoreMovies()
 }
 
 class DiscoverMovieViewController: UIViewController, DiscoverMovieViewContract {
@@ -47,15 +48,33 @@ class DiscoverMovieViewController: UIViewController, DiscoverMovieViewContract {
         
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
+        movieCollectionView.isHidden = true
     }
 
     func update(with movies: [Movie]) {
-        self.movies.append(contentsOf: movies)
-        self.movieCollectionView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.movies.append(contentsOf: movies)
+            self?.movieCollectionView.reloadData()
+            if self?.movies.count == movies.count {
+                self?.movieCollectionView.isHidden = false
+            }
+        }
     }
     
     func update(with error: String) {
         print(error)
+        let action = UIAlertAction(title: "OK", style: .default) { [weak self] action in
+            if self?.movies.count == 0 {
+                self?.dismiss(animated: true)
+            }
+        }
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    func getMoreMovies() {
+        (presenter as? DiscoverMoviePresenterContract)?.loadMoreMovies()
     }
 }
 
@@ -84,12 +103,15 @@ extension DiscoverMovieViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(movies[indexPath.row])
+        let router = PrimaryInfoRouter.start(with: movies[indexPath.row])
+        self.navigationController?.pushViewController(router.entry!, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == movies.count - 1 {
             print("Should load more movie pages")
+            
+            self.getMoreMovies()
         }
     }
 }

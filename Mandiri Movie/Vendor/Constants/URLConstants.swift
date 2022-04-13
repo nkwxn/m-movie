@@ -28,4 +28,8 @@ struct URLConstants {
     public static func getImageURL(by path: String) -> String {
         return "https://image.tmdb.org/t/p/w500\(path)"
     }
+    
+    public static func getReviewsURL(for movieId: Int) -> String {
+        return "https://api.themoviedb.org/3/movie/\(movieId)/reviews?api_key=\(apiKey)"
+    }
 }

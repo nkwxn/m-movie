@@ -9,20 +9,23 @@ import Foundation
 
 protocol DiscoverMoviePresenterContract: AnyPresenter {
     func interactorDidFetchMovies(with result: Result<[Movie], Error>)
+    func loadMoreMovies()
 }
 
 class DiscoverMoviePresenter: DiscoverMoviePresenterContract {
-    init(_ genreId: Int?) {
-        self.genreId = genreId
+    init(_ genre: Genre?) {
+        self.genre = genre
     }
     
-    var genreId: Int?
+    var genre: Genre?
+    
+    var page: Int = 1
     
     var router: AnyRouter?
     var interactor: AnyInteractor? {
         didSet {
             if let interactor = interactor as? DiscoverMovieInteractorContract {
-                interactor.getMovieDiscovery(with: genreId, on: nil)
+                interactor.getMovieDiscovery(with: genre?.id, on: nil)
             }
         }
     }
@@ -36,9 +39,18 @@ class DiscoverMoviePresenter: DiscoverMoviePresenterContract {
         switch result {
         case .success(let genres):
             print("Should be success appending movies")
+            page += 1
             view.update(with: genres)
         case .failure(let error):
             view.update(with: error.localizedDescription)
         }
+    }
+    
+    func loadMoreMovies() {
+        guard let interactor = interactor as? DiscoverMovieInteractorContract else {
+            return
+        }
+
+        interactor.getMovieDiscovery(with: genre?.id, on: page)
     }
 }
