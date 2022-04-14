@@ -176,7 +176,9 @@ class PrimaryInfoViewController: UIViewController, PrimaryInfoViewContract {
     }
     
     func showError(with error: Error) {
-        if (error as! MoviesNetworkError) != .pageEnded {
+        if (error as? MoviesNetworkError) == .pageEnded {
+            print("Should never show any alert")
+        } else {
             let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default)
             alert.addAction(action)
