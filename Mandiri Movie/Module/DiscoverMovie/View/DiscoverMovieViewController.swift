@@ -37,6 +37,13 @@ class DiscoverMovieViewController: UIViewController, DiscoverMovieViewContract {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.navigationController?.navigationBar.tintColor = UIColor(named: "AccentColor")
+        }
+    }
+    
     private func setupView() {
         
         movieCollectionView
@@ -65,7 +72,7 @@ class DiscoverMovieViewController: UIViewController, DiscoverMovieViewContract {
         print(error)
         let action = UIAlertAction(title: "OK", style: .default) { [weak self] action in
             if self?.movies.count == 0 {
-                self?.dismiss(animated: true)
+                self?.navigationController?.popViewController(animated: true)
             }
         }
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)

@@ -25,11 +25,27 @@ struct URLConstants {
         }
     }
     
-    public static func getImageURL(by path: String) -> String {
-        return "https://image.tmdb.org/t/p/w500\(path)"
+    public static func getMovieDetailURL(with movieId: Int?) -> String {
+        return "\(baseURL)/movie/\(movieId ?? 0)?api_key=\(apiKey)"
     }
     
-    public static func getReviewsURL(for movieId: Int) -> String {
-        return "https://api.themoviedb.org/3/movie/\(movieId)/reviews?api_key=\(apiKey)"
+    public static func getImageURL(by path: String?) -> String {
+        return "https://image.tmdb.org/t/p/w500\(path ?? "")"
+    }
+    
+    public static func getReviewsURL(for movieId: Int, on page: Int? = nil) -> String {
+        return "\(baseURL)/movie/\(movieId)/reviews?api_key=\(apiKey)\(page != nil ? "&page=\(page!)" : "")"
+    }
+    
+    public static func getVideosURL(for movieId: Int) -> String {
+        return "\(baseURL)/movie/\(movieId)/videos?api_key=\(apiKey)"
+    }
+    
+    public static func generateYoutubeThumbURL(with key: String) -> String {
+        return "https://img.youtube.com/vi/\(key)/hqdefault.jpg"
+    }
+    
+    public static func generateYoutubeURL(with key: String) -> String {
+        return "https://www.youtube.com/embed/\(key)"
     }
 }

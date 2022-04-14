@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PrimaryInfoRouterContract: AnyRouter {
     static func start(with movie: Movie?) -> AnyRouter
@@ -24,9 +25,10 @@ class PrimaryInfoRouter: PrimaryInfoRouterContract {
         
         // Assign VIP
         var view: AnyView = PrimaryInfoViewController()
-        var presenter: AnyPresenter = PrimaryInfoPresenter()
+        var presenter: AnyPresenter = PrimaryInfoPresenter(with: nil)
         var interactor: AnyInteractor = PrimaryInfoInteractor()
         
+        (view as! UIViewController).title = "Movie Detail"
         view.presenter = presenter
         
         interactor.presenter = presenter
@@ -46,9 +48,10 @@ class PrimaryInfoRouter: PrimaryInfoRouterContract {
         
         // Assign VIP
         var view: AnyView = PrimaryInfoViewController()
-        var presenter: AnyPresenter = PrimaryInfoPresenter()
+        var presenter: AnyPresenter = PrimaryInfoPresenter(with: movie)
         var interactor: AnyInteractor = PrimaryInfoInteractor()
         
+//        (view as! UIViewController).title = movie?.title
         view.presenter = presenter
         
         interactor.presenter = presenter

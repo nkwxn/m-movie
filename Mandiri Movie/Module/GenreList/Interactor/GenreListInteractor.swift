@@ -23,10 +23,6 @@ class GenreListInteractor: GenreInteractorContract {
             if let data = response.data {
                 do {
                     let response = try JSONDecoder().decode(BaseGenres.self, from: data)
-                    UDHelper.shared.inputGenres(value: response.genres.reduce(into: [Int: String](), { dict, genre in
-                        var dict = dict
-                        dict[genre.id!] = genre.name!
-                    }))
                     presenter.interactorDidFetchGenres(with: .success(response.genres))
                 } catch {
                     fatalError(error.localizedDescription)

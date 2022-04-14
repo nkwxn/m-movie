@@ -8,6 +8,8 @@
 import Foundation
 
 protocol DiscoverMoviePresenterContract: AnyPresenter {
+    var genre: Genre? { get set }
+    
     func interactorDidFetchMovies(with result: Result<[Movie], Error>)
     func loadMoreMovies()
 }
@@ -19,13 +21,11 @@ class DiscoverMoviePresenter: DiscoverMoviePresenterContract {
     
     var genre: Genre?
     
-    var page: Int = 1
-    
     var router: AnyRouter?
     var interactor: AnyInteractor? {
         didSet {
             if let interactor = interactor as? DiscoverMovieInteractorContract {
-                interactor.getMovieDiscovery(with: genre?.id, on: nil)
+                interactor.getMovieDiscovery(with: genre?.id)
             }
         }
     }
@@ -38,8 +38,6 @@ class DiscoverMoviePresenter: DiscoverMoviePresenterContract {
         
         switch result {
         case .success(let genres):
-            print("Should be success appending movies")
-            page += 1
             view.update(with: genres)
         case .failure(let error):
             view.update(with: error.localizedDescription)
@@ -51,6 +49,6 @@ class DiscoverMoviePresenter: DiscoverMoviePresenterContract {
             return
         }
 
-        interactor.getMovieDiscovery(with: genre?.id, on: page)
+        interactor.getMovieDiscovery(with: genre?.id)
     }
 }

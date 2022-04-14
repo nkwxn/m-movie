@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TrailerCardCollectionViewCell" customModule="Mandiri_Movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="275"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iY-Ce-9rm">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="275"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIy-Hl-3TO">
+                                <rect key="frame" x="20" y="20" width="298" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-CL-dJI">
+                                <rect key="frame" x="0.0" y="65" width="338" height="190"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Tj-CL-dJI" secondAttribute="height" multiplier="16:9" id="lVc-It-K32"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AIy-Hl-3TO" firstAttribute="top" secondItem="4iY-Ce-9rm" secondAttribute="top" constant="20" symbolic="YES" id="Dpb-hZ-JYv"/>
+                            <constraint firstItem="4Tj-CL-dJI" firstAttribute="top" secondItem="AIy-Hl-3TO" secondAttribute="bottom" constant="8" symbolic="YES" id="HBL-tb-fY6"/>
+                            <constraint firstAttribute="bottom" secondItem="4Tj-CL-dJI" secondAttribute="bottom" constant="20" symbolic="YES" id="KVO-xJ-vgb"/>
+                            <constraint firstItem="4Tj-CL-dJI" firstAttribute="leading" secondItem="4iY-Ce-9rm" secondAttribute="leading" id="M8u-fY-cbd"/>
+                            <constraint firstItem="AIy-Hl-3TO" firstAttribute="leading" secondItem="4iY-Ce-9rm" secondAttribute="leading" constant="20" symbolic="YES" id="RqC-3v-xCV"/>
+                            <constraint firstAttribute="trailing" secondItem="4Tj-CL-dJI" secondAttribute="trailing" id="jLd-6g-918"/>
+                            <constraint firstAttribute="trailing" secondItem="AIy-Hl-3TO" secondAttribute="trailing" constant="20" symbolic="YES" id="zw9-F6-UXb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4iY-Ce-9rm" secondAttribute="bottom" id="l7V-hw-XjH"/>
+                <constraint firstItem="4iY-Ce-9rm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="m2s-zr-1Fc"/>
+                <constraint firstAttribute="trailing" secondItem="4iY-Ce-9rm" secondAttribute="trailing" id="qi1-gX-AId"/>
+                <constraint firstItem="4iY-Ce-9rm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="smD-wx-8yp"/>
+            </constraints>
+            <size key="customSize" width="338" height="275"/>
+            <connections>
+                <outlet property="cardView" destination="4iY-Ce-9rm" id="N4a-hz-lBR"/>
+                <outlet property="titleLabel" destination="AIy-Hl-3TO" id="iAW-fs-c7U"/>
+                <outlet property="vidPlayerWebView" destination="4Tj-CL-dJI" id="PFY-Ax-qoa"/>
+            </connections>
+            <point key="canvasLocation" x="-2.8985507246376816" y="58.59375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

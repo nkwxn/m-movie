@@ -79,5 +79,6 @@ extension GenreListViewController: UITableViewDataSource, UITableViewDelegate {
         let discoverRouter = DiscoverMovieRouter.start(with: genres[indexPath.row])
         let vc = discoverRouter.entry!
         self.navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

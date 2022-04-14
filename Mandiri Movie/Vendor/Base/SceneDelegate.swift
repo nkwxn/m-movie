@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let genreRouter = GenreListRouter.start()
             let rootVC = genreRouter.entry!
             let navVC = UINavigationController(rootViewController: rootVC)
+//            navVC.childForStatusBarStyle = 
+            navVC.navigationBar.prefersLargeTitles = true
             
             // Configure this when going to make a tab bar controller
             window.rootViewController = navVC
